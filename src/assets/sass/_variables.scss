@@ -1,0 +1,44 @@
+// dark
+$primary: #0159A1;
+$secondary: #FF7941;
+// light
+$primaryTwo: #3D6D79;
+$secondaryTwo: #F9AB0D;
+// bgLinearGradient
+$bgLinearGradient: linear-gradient(white, #FEFFEF);
+// font-size
+$fontSizeBase: 16px;
+// space
+$spaceBase: 12px;
+
+[data-theme="light"] {
+    --bg-color1: #{$bgLinearGradient};
+    --primary:#{$primary};
+    --secondary: #{$secondary};
+}
+
+[data-theme="dark"] {
+    --bg-color1: #{$bgLinearGradient};
+    --primary:#{$primaryTwo};
+    --secondary: #{$secondaryTwo};
+}
+
+body {
+    background: var(--bg-color1);
+    font-size: $fontSizeBase;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: auto;
+    padding: 0 $spaceBase;
+
+    @media screen and (min-width:768px) {
+        max-width: 1296px;
+    }
+}
